@@ -18,7 +18,7 @@ public class DogController {
     }
 
 
-    @DeleteMapping(path="/{id}")
+    @DeleteMapping(path="{id}")
     public void deleteDog(@PathVariable("id") Long id){
         dogService.deleteDog(id);
     }
@@ -26,7 +26,7 @@ public class DogController {
     @GetMapping
     public List<Dog> getDogs(){return dogService.getDogs();}
 
-    @GetMapping(path = "{/id}")
+    @GetMapping(path = "{id}")
     public Optional<Dog> getDogById(@PathVariable("id") Long id){
         return dogService.getDogById(id);
     }
